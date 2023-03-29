@@ -21,7 +21,7 @@ str[index - 1] == '.' ||
 str[index - 1] == '!' ||
 str[index - 1] == '?' ||
 str[index - 1] == '"' ||
-r[index - 1] == '(' ||
+str[index - 1] == '(' ||
 str[index - 1] == ')' ||
 str[index - 1] == '{' ||
 str[index - 1] == '}' ||
