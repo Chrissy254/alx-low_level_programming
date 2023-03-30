@@ -8,12 +8,12 @@
 int main(void)
 {
 /**
- * puts - prints the given string and a newline character to stdout
+*puts - prints the given string and a newline character to stdout
 *
-* Description: This function is used to print the message "Programming is like building a multilingual puzzle"
+* Description: This function prin "Programming is like building a multilingual"
 *followed by a new line.
 */
-puts("Programming is like building a multilingual puzzle");
+puts("\"Programming is like building a multilingual puzzle");
 return (0);
 }
 
