@@ -1,10 +1,10 @@
 #include <stdio.h>
 /*
-*main - entry point
-*Description: Prints the alphabet in lowercase
-*using the putchar function twice
-*followed by a new line
-*Return: Always 0 (Success)
+*main - prints lowercase alphabet using the putchar function
+*It declares a character variable letter to hold each letter of the alphabet,
+*then uses a for loop to iterate and print them using putchar
+*Finally, main prints a newline character
+*returns: 0 to indicate successful execution.
 */
 int main(void)
 {
@@ -16,4 +16,3 @@ putchar(i);
 putchar('\n');
 return (0);
 }
-
