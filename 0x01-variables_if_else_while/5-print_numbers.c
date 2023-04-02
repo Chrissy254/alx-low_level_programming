@@ -10,7 +10,7 @@ int i;
 /* print single digit numbers */
 for (i = 0; i < 10; i++)
 {
-putchar(i + '0'); 
+putchar(i + '0');
 /*convert digit to character and print */
 }
 /* print newline */
