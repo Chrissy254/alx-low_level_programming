@@ -1,36 +1,42 @@
 #include <stdlib.h>
 #include "main.h"
 /**
-* *argstostr - concatenates all the arguments of the program
-* @ac: number of arguments
-* @av: array of arguments
-* Return: Pointer to the new string (Success), NULL (Error)
+* argstostr - Concatenates all the arguments of a program.
+* @ac: The number of arguments.
+* @av: An array of strings containing the arguments.
+* Return: A pointer to the concatenated string, or NULL if it fails.
 */
 char *argstostr(int ac, char **av)
 {
-int i, j, k, len;
 char *str;
+int i, j, len, total_len = 0;
 if (ac == 0 || av == NULL)
 return (NULL);
+/* Calculate the total length of the concatenated string */
 for (i = 0; i < ac; i++)
 {
-for (j = 0; av[i][j] != '\0'; j++)
+len = 0;
+while (av[i][len])
 len++;
-len++;
+total_len += len;
 }
-str = malloc(sizeof(char) * (len + 1));
+/* Allocate memory for the concatenated string */
+str = malloc(sizeof(char) * (total_len + ac + 1));
 if (str == NULL)
 return (NULL);
-k = 0;
+/* Copy the arguments into the concatenated string */
+len = 0;
 for (i = 0; i < ac; i++)
 {
-for (j = 0; av[i][j] != '\0'; j++)
+for (j = 0; av[i][j]; j++)
 {
-str[k] = av[i][j];
-k++;
+str[len] = av[i][j];
+len++;
 }
-str[k] = '\n';
-k++;
+str[len] = '\n';
+len++;
 }
+str[len] = '\0';
 return (str);
 }
+
