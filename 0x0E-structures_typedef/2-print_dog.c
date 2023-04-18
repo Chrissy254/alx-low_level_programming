@@ -1,10 +1,8 @@
 #include <stdio.h>
 #include "dog.h"
 /**
-*assume that the struct dog is defined in a header file called "dog.h"
 * print_dog - Prints the elements of a dog structure
 * @d: Pointer to the dog structure to print
-*
 * Return: void
 */
 void print_dog(struct dog *d)
