@@ -1,38 +1,17 @@
+#include <stdio.h>
+#include "dog.h"
+
 /**
- * new_dog - creates a new dog
- * @name: name of the dog
- * @age: age of the dog
- * @owner: owner of the dog
+ * main - check the code
  *
- * Return: pointer to the new dog, or NULL on failure
+ * Return: Always 0.
  */
-dog_t *new_dog(char *name, float age, char *owner)
+int main(void)
 {
-  dog_t *new_dog;
+    dog_t *my_dog;
 
-  new_dog = malloc(sizeof(dog_t));
-  if (new_dog == NULL)
-    return (NULL);
-
-  new_dog->name = malloc(sizeof(char) * (strlen(name) + 1));
-  if (new_dog->name == NULL)
-  {
-    free(new_dog);
-    return (NULL);
-  }
-  strcpy(new_dog->name, name);
-
-  new_dog->owner = malloc(sizeof(char) * (strlen(owner) + 1));
-  if (new_dog->owner == NULL)
-  {
-    free(new_dog->name);
-    free(new_dog);
-    return (NULL);
-  }
-  strcpy(new_dog->owner, owner);
-
-  new_dog->age = age;
-
-  return (new_dog);
+    my_dog = new_dog("Poppy", 3.5, "Bob");
+    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog->name, my_dog->age);
+    free_dog(my_dog);
+    return (0);
 }
-
